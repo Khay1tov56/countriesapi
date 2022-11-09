@@ -12,13 +12,10 @@ let data;
 async function list(arr) {
     try {
         elList.innerHTML = "";
-        let res = await fetch(arr)
+        let res = await fetch(arr);
         data = await res.json();
-        console.log(data);
-        // elModalMaps.href = data.maps.googleMaps
         data.forEach(element => {
             let elTemplateClone = elTemplate.cloneNode(true)
-            // console.log(element);
             elTemplateClone.querySelector(".image").src = element.flags.svg;
             elTemplateClone.querySelector(".title").textContent = element.name.official;
             elTemplateClone.querySelector(".pop").textContent = element.population;
@@ -41,7 +38,6 @@ list(`https://restcountries.com/v3.1/all`)
 function modalText(arr) {
     
     let fundModal = data.find(element => element.name.common === arr);
-    
     let elModalImg = document.querySelector(".modalimage").src = fundModal.flags.svg
     let elModalTitle = document.querySelector(".modal-title").textContent = fundModal.name.official;
     let elModalRegion = document.querySelector(".modalregion").textContent = fundModal.region
