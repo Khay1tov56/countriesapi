@@ -39,13 +39,17 @@ list(`https://restcountries.com/v3.1/all`)
 
 
 function modalText(arr) {
+    
     let fundModal = data.find(element => element.name.common === arr);
-
+    
     let elModalImg = document.querySelector(".modalimage").src = fundModal.flags.svg
+    let elModalTitle = document.querySelector(".modal-title").textContent = fundModal.name.official;
     let elModalRegion = document.querySelector(".modalregion").textContent = fundModal.region
-    let elModalCurrency = document.querySelector(".currency").textContent = fundModal.currencies;
+    let currenc = Object.keys(fundModal.currencies)
+    let elModalCurrency = document.querySelector(".currency").textContent = currenc;
     let elModalBorder = document.querySelector(".border").textContent = fundModal?.borders
-    let elModalLanguage = document.querySelector(".language").textContent = fundModal.languages.eng
+    let languages = Object.values(fundModal.languages);
+    let elModalLanguage = document.querySelector(".language").textContent = languages.join(", ", " ");
     let elModalSubregion = document.querySelector(".subregion").textContent = fundModal.subregion;
     let elModalMaps = document.querySelector(".maps").href = fundModal.maps.googleMaps
 }
