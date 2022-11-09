@@ -1,0 +1,97 @@
+body {
+    background-color: #202C36;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+select {
+    background-color: #202C36;
+    color: white;
+}
+
+input {
+    background-color: #202C36;
+    color: white;
+    width: 400px;
+    outline: none;
+    border: 1px solid white;
+    padding: 7px 5px;
+    border-radius: 5px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item {
+    width: 100%;
+    max-width: 264px;
+    margin: 0 auto;
+    background-color: #2B3844;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+
+.image {
+    border-radius: 10px 10px 0 0 ;
+}
+
+.itemwrap {
+    padding: 24px 24px 46px 24px;
+}
+
+.title {
+    padding-bottom: 24px;
+    color: white;
+}
+
+.list p {
+    color: white;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+/* .popul {
+    color: white;
+}
+
+.reg {
+    color: white;
+} */
+img {
+    object-fit: cover;
+}
+.modallist {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.modal-header .btn-close {
+    margin: 0 !important;
+}
+.modallist p {
+    color: black;
+    font-weight: bold;
+}
+
+.modallist span {
+    color: #2B3844;
+}
+
+.modallist a {
+    text-decoration: none;
+    color: rgb(113, 113, 32);
+}
